@@ -1,0 +1,28 @@
+{
+    "person": [
+        {
+            "txt" : [
+                "한 해<br/>마무리 잘 되게<br/>해주세요",
+                "가족 모두<br/>건강하고<br/>행복하길",
+                "시험에<br/>합격하게<br/>해주세요",
+                "올해도<br/>덕분에<br/>따뜻했습니다."
+            ],
+            "photo_card_url" : [
+                "images/card/photo_card_1.png",
+                "images/card/photo_card_2.png",
+                "images/card/photo_card_3.png",
+                "images/card/photo_card_4.png",
+                "images/card/photo_card_5.png",
+                "images/card/photo_card_6.png"
+            ],
+            "txt_card_url" : [
+                "images/card/text_card_1.png",
+                "images/card/text_card_2.png",
+                "images/card/text_card_3.png",
+                "images/card/text_card_4.png",
+                "images/card/text_card_5.png",
+                "images/card/text_card_6.png"
+            ]
+        }
+    ]
+}
