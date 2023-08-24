@@ -3,17 +3,19 @@ let assetsJson = new Array();
 let personJson = new Array();
 
 $(function () {
+    window.onload = () => {
+        let startDelay = 1800000;
+        AjaxCall();
+    }
 
-    AjaxCall();
-
-    function AjaxCall(){
+    function AjaxCall(a){
     $.ajax({
         type: 'GET',
         url : 'https://novus.run/smartluna/lunatree/list',
         contentType: 'application/json; charset=utf-8',
         
         success: function(data) {
-            StartHtml(data);
+            StartContent(data);
         },
         
         error: function(e) {
@@ -23,10 +25,10 @@ $(function () {
         }
         });
 
-        // setInterval(AjaxCall, 1000);
+        clearTimeout(AjaxCall, 3000);
     }
     
-    function StartHtml(data){
+    function StartContent(data){
     $.getJSON("include/assets.json", function (res) {
         personJson = data;
         assetsJson = res;
@@ -106,7 +108,7 @@ $(function () {
 
             }, addDelay)
 
-            addDelay = 5000;
+            addDelay = 3000;
         }
 
         // 일정 시간마다 리스트 출력
@@ -184,7 +186,15 @@ $(function () {
                 function animateItem(item, x) {
                     setTimeout(function () {
                         let thisLeft = Number(item.parent().css('left').slice(0, -2));
-                        $(window).width < thisLeft + x ? x = -x : x;
+
+                        let windowLeft = $(window).width() / 8;
+                        let windowRight = $(window).width() - windowLeft;
+
+                        if(windowRight < thisLeft + x){
+                            x = - (x * 2);
+                        }else if(windowLeft > thisLeft + x){
+                            x = (x * 2);
+                        }
                         
                         item.css({
                             'transform': 'translateX(' + (x) + 'px)',
