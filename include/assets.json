@@ -12,5 +12,11 @@
         "images/card/text_card_4.png",
         "images/card/text_card_5.png",
         "images/card/text_card_6.png"
+    ],
+    "lantern" : [
+        "images/lantern/latern_01.png",
+        "images/lantern/latern_02.png",
+        "images/lantern/latern_03.png",
+        "images/lantern/latern_04.png"
     ]
 }

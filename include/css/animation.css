@@ -1,0 +1,19 @@
+@keyframes lanternLight{
+    from {
+        opacity:0; 
+        background:rgba(255, 255, 255, 0);
+    }
+    to {
+        opacity:1; 
+        background:rgba(255, 212, 0, 0.2);
+    }
+}
+
+@keyframes animateTop {
+    from {
+        top:100%;
+    }
+    to {
+        top:-100%;
+    }
+}
